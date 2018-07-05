@@ -31,7 +31,7 @@ def main():
     e = json['event']
     if e['type'] == 'app_mention' and 'user' in e and e['user'] != bot:
         # print(json)
-        info = parse_message(json)
+        info = understand_message(json)
         print(info)
         if 'cancel' in info:
             finish_pending_bubbles(info['cancel'], info['channel'])
