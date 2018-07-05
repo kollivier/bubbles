@@ -268,9 +268,9 @@ def blow_bubbles(context, prompt):
 # natural language processing brought to you by regex!
 QUANTITY_PATTERN = r"(?:(?:(?:blow)|(?:create)|(?:make)|(?:spawn)|(?:prepare)|(?:synthesize)|(?:give\sus)|(?:let\sus\shave))\s(?P<number>\d*))"
 SIZE_PATTERN = r"(?:.*?of\s(?P<size>[\d*\s(or)\-]*))"
-SECONDS_PATTERN = r"([\d\.\,]+)\s*(?:s(?:ec)*(?:ond)*(?:s)*)"
-MINUTES_PATTERN = r"([\d\.\,]+)\s*(?:m(?:in)*(?:utes)*(?:s)*)"
-HOURS_PATTERN = r"([\d\.\,]+)\s*(?:h(?:ou)*(?:r)*(?:s)*)"
+SECONDS_PATTERN = r"([\d\.\,]+)\s*\b(s|sec|second|seconds)\b"
+MINUTES_PATTERN = r"([\d\.\,]+)\s*\b(m|min|minute|minutes)\b"
+HOURS_PATTERN = r"([\d\.\,]+)\s*\b(h|hour|hours)\b"
 DM_PATTERN = r"(direct\smessage(?:s)*|dm(?:s)*)"
 THREADS_PATTERN = r"(threads|threaded)"
 PROMPTS_PATTERN = r"(?:.*\:\n(?P<prompts>.*))"
